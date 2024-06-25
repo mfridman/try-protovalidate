@@ -11,10 +11,12 @@ managed:
 plugins:
   # BSR remote plugin
   - remote: buf.build/protocolbuffers/go
+    include_imports: true
     out: gen/go
     opt: 
       - paths=source_relative
   - remote: buf.build/grpc/go
+    include_imports: true
     out: gen/go
     opt: 
       - paths=source_relative
