@@ -30,6 +30,8 @@ Now, the [bufbuild/registry](https://buf.build/bufbuild/registry) module itself 
 However, there's no way for the current project to generate code that **does not** include the
 protovalidate-related bits.
 
+### Blank import
+
 1. There's the blank import in the generated file: gen/go/buf/registry/owner/v1/user.pb.go
 
 This is tricky because it's the code generator (`protoc-gen-go`) itself adding a blank import.
@@ -47,6 +49,8 @@ import (
 	sync "sync"
 )
 ```
+
+### Generated code
 
 2. There's generated code from the protovalidate module.
 

@@ -11,5 +11,5 @@ service APIService {
 message GetUserInfoRequest {}
 
 message GetUserInfoResponse {
-    buf.registry.owner.v1.User user_info = 1;
+  buf.registry.owner.v1.User user_info = 1;
 }
