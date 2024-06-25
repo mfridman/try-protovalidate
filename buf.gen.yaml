@@ -1,0 +1,20 @@
+version: v2
+inputs:
+   - directory: proto/
+
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/mfridman/try-protovalidate/gen/go
+
+plugins:
+  # BSR remote plugin
+  - remote: buf.build/protocolbuffers/go
+    out: gen/go
+    opt: 
+      - paths=source_relative
+  - remote: buf.build/grpc/go
+    out: gen/go
+    opt: 
+      - paths=source_relative

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package api.v1;
+
+import "buf/registry/owner/v1/user.proto";
+
+service APIService {
+  rpc GetUserInfo(GetUserInfoRequest) returns (GetUserInfoResponse);
+}
+
+message GetUserInfoRequest {}
+
+message GetUserInfoResponse {
+    buf.registry.owner.v1.User user_info = 1;
+}
